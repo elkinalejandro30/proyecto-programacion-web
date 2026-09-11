@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- # SEO: título descriptivo para identificar la página en buscadores y pestañas. -->
+    <title>AndyGusteau | Cocina de autor en Bogotá</title>
+    <!-- # SEO: descripción breve y relevante para los resultados de búsqueda. -->
+    <meta name="description" content="Conoce AndyGusteau, restaurante ficticio de cocina de autor, sus especialidades, horarios y propuesta gastronómica.">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- # Encabezado y navegación principal compartidos por las tres páginas. -->
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Ir al inicio de AndyGusteau">
+            <span class="brand-mark">AG</span>
+            <span>AndyGusteau</span>
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a class="active" href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- # Presentación principal del restaurante. -->
+        <section class="hero home-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Cocina de autor · Bogotá</p>
+                <h1>El sabor también cuenta historias.</h1>
+                <p class="hero-text">AndyGusteau combina ingredientes colombianos, técnicas contemporáneas y una mesa pensada para quedarse un rato más.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="reservas.html">Reservar una mesa</a>
+                    <a class="button button-secondary" href="menu.html">Explorar el menú</a>
+                </div>
+            </div>
+            <div class="hero-image-wrap">
+                <img src="imagenes/restaurante.jpg" alt="Comedor cálido y elegante del restaurante AndyGusteau">
+                <span class="image-note">Mesa 07 · La favorita de la casa</span>
+            </div>
+        </section>
+
+        <!-- # Historia y valores que explican la identidad del restaurante. -->
+        <section class="section split-section">
+            <div>
+                <p class="eyebrow">Nuestra historia</p>
+                <h2>Una cocina con memoria y curiosidad.</h2>
+                <p>AndyGusteau nació de una pregunta sencilla: ¿qué pasa cuando una receta familiar se encuentra con una mirada nueva? Cada plato parte de una memoria local y llega a la mesa con una presentación actual.</p>
+                <p class="signature">Con cariño, Andy.</p>
+            </div>
+            <div class="accent-panel">
+                <span class="panel-number">03</span>
+                <p>ingredientes protagonistas por temporada</p>
+                <span class="panel-line"></span>
+                <strong>Origen · Técnica · Encuentro</strong>
+            </div>
+        </section>
+
+        <!-- # Lista HTML obligatoria: experiencias y servicios principales. -->
+        <section class="section muted-section">
+            <div class="section-heading">
+                <p class="eyebrow">Lo que encontrarás</p>
+                <h2>Una experiencia completa</h2>
+            </div>
+            <ul class="feature-list">
+                <li><span>01</span><strong>Menú de temporada</strong><small>Platos que cambian con el mejor producto disponible.</small></li>
+                <li><span>02</span><strong>Maridajes honestos</strong><small>Vinos y bebidas pensados para acompañar, no competir.</small></li>
+                <li><span>03</span><strong>Atención cercana</strong><small>Una bienvenida cálida desde que llegas hasta el último café.</small></li>
+            </ul>
+        </section>
+
+        <!-- # Tabla HTML obligatoria con información útil del restaurante. -->
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Información práctica</p>
+                <h2>Planea tu visita</h2>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <caption>Horarios y datos de atención de AndyGusteau</caption>
+                    <thead>
+                        <tr><th>Servicio</th><th>Días</th><th>Horario</th><th>Dirección</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Almuerzo</td><td>Martes a viernes</td><td>12:00 - 15:00</td><td>Cra. 5 # 72-18</td></tr>
+                        <tr><td>Cena</td><td>Martes a sábado</td><td>18:00 - 22:30</td><td>Cra. 5 # 72-18</td></tr>
+                        <tr><td>Brunch</td><td>Domingos</td><td>10:00 - 14:00</td><td>Cra. 5 # 72-18</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- # Video incrustado: recurso multimedia relacionado con cocina. -->
+        <section class="section video-section">
+            <div class="section-heading">
+                <p class="eyebrow">Desde nuestra cocina</p>
+                <h2>El ritual detrás de cada plato</h2>
+            </div>
+            <div class="video-frame">
+                <video controls preload="metadata" poster="imagenes/restaurante.jpg" aria-label="Video gastronómico de AndyGusteau">
+                    <source src="imagenes/0910.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video local.
+                </video>
+            </div>
+        </section>
+
+        <!-- # Nota académica: el sitio es frontend estático y describe el backend real. -->
+        <section class="section tech-note">
+            <div>
+                <p class="eyebrow">Línea A · Formularios y peticiones</p>
+                <h2>Frontend hoy, backend mañana.</h2>
+            </div>
+            <p>Este proyecto es un sitio estático: HTML, CSS y JavaScript se ejecutan en el navegador. En un restaurante real, un backend guardaría reservas y clientes. Allí <strong>GET</strong> consultaría disponibilidad, <strong>POST</strong> crearía una reserva, <strong>PUT</strong> actualizaría sus datos y <strong>DELETE</strong> la eliminaría.</p>
+        </section>
+    </main>
+
+    <!-- # Pie de página presente en todas las páginas. -->
+    <footer class="site-footer">
+        <div><strong>AndyGusteau</strong><span>Cocina que se recuerda.</span></div>
+        <p>Proyecto académico · Sitio frontend estático</p>
+        <a href="mailto:hola@andygusteau.test">hola@andygusteau.test</a>
+    </footer>
+    <!-- # JavaScript compartido: en esta página no hay formularios, pero se mantiene la integración uniforme. -->
+    <script src="script.js"></script>
+</body>
+</html>
