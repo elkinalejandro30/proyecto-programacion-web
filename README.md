@@ -1,5 +1,34 @@
 # AndyGusteau
 
+
+## Descripción del proyecto
+
+
+AndyGusteau es un sitio web académico para un restaurante ficticio de cocina de autor. El proyecto fue desarrollado principalmente con HTML, CSS y JavaScript, sin un backend conectado.
+
+
+La página representa el **frontend** del restaurante: muestra información, presenta el menú, permite diligenciar formularios y responde visualmente a las acciones del usuario. Los datos de los formularios se validan en el navegador, pero no se guardan en una base de datos porque este ejercicio funciona como un sitio estático.
+
+
+## Objetivo académico
+
+
+El proyecto aplica la línea de profundización **Línea A: Formularios y peticiones, Temática 3**.
+
+
+La actividad se desarrolló en pareja y por eso incluye:
+
+## Mapa de responsabilidades del codigo
+
+- `index.html`: presenta el restaurante, la navegacion, el contenido multimedia y la informacion institucional.
+- `menu.html`: organiza la carta, las imagenes de los platos y la solicitud de eventos especiales.
+- `reservas.html`: contiene el formulario de reserva y sus restricciones de entrada.
+- `estilos.css`: concentra la identidad visual, la composicion responsive y los estados de los componentes.
+- `script.js`: valida fechas y formularios, muestra feedback y evita el envio local de datos.
+- `imagenes/`: almacena los recursos visuales y el video utilizados por las paginas.
+
+Esta separacion permite identificar donde se define la estructura, donde se presenta la interfaz y donde se controla el comportamiento interactivo del proyecto.# AndyGusteau
+
 ## Descripción del proyecto
 
 AndyGusteau es un sitio web académico para un restaurante ficticio de cocina de autor. El proyecto fue desarrollado principalmente con HTML, CSS y JavaScript, sin un backend conectado.
@@ -41,17 +70,6 @@ AndyGusteau/
 ## Cómo ejecutar el proyecto
 
 El proyecto no necesita `npm install`, Node.js ni un servidor backend.
-
-### Requisito para descargar el video
-
-El video `imagenes/0910.mp4` se administra con Git LFS por su tamaño. Antes de clonar el repositorio, instala Git LFS desde [git-lfs.com](https://git-lfs.com/) y ejecuta:
-
-```bash
-git lfs install
-git clone URL_DEL_REPOSITORIO
-```
-
-Si el repositorio ya fue clonado, ejecuta `git lfs pull` dentro de la carpeta del proyecto para descargar el video completo.
 
 ### Opción 1: abrir directamente
 
