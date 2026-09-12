@@ -1,4 +1,43 @@
+/* Documentacion: estilos globales, layout responsive, componentes compartidos y estados visuales del sitio. */
 /* # Variables globales: una paleta cálida que relaciona el diseño con la experiencia del restaurante. */
+:root {
+    --ink: #202522;
+    --muted: #6d756e;
+    --cream: #f5f2ea;
+    --paper: #fffdf8;
+    --sage: #788d72;
+    --sage-dark: #3d5642;
+    --coral: #d5765f;
+    --line: #dfe3d9;
+    --serif: Georgia, 'Times New Roman', serif;
+    --sans: 'Trebuchet MS', Verdana, sans-serif;
+}
+
+
+/* # Reinicio pequeño y reglas base para mantener consistencia entre páginas. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.6; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+
+/* # Encabezado fijo visualmente sobrio para facilitar la navegación. */
+.site-header { align-items: center; background: rgba(255, 253, 248, .96); border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; padding: 20px clamp(24px, 6vw, 88px); position: sticky; top: 0; z-index: 10; }
+.brand { align-items: center; display: flex; font-family: var(--serif); font-size: 1.35rem; font-weight: bold; gap: 10px; text-decoration: none; }
+.brand-mark { align-items: center; background: var(--coral); color: white; display: inline-flex; font-family: var(--sans); font-size: .75rem; height: 31px; justify-content: center; letter-spacing: .08em; width: 31px; }
+.main-nav { display: flex; gap: clamp(16px, 3vw, 38px); }
+.main-nav a { color: var(--muted); font-size: .85rem; letter-spacing: .08em; padding: 5px 0; text-decoration: none; text-transform: uppercase; }
+.main-nav a:hover, .main-nav a.active { color: var(--sage-dark); border-bottom: 2px solid var(--coral); }
+
+
+/* # Tipografía y bloques compartidos por las secciones de contenido. */
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: normal; line-height: 1.08; }
+h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); margin-bottom: 24px; max-width: 760px; }
+h2 { font-size: clamp(2rem, 4vw, 3.6rem); margin-bottom: 20px; }
+h3 { font-size: 1.65rem; margin-bottom: 8px; }
+.eyebrow { color: var(--coral); font-size: .75rem; font-weight: bold; letter-spacing: .18em; margin-bottom: 16px; text-transform: uppercase; }/* # Variables globales: una paleta cálida que relaciona el diseño con la experiencia del restaurante. */
 :root {
     --ink: #202522;
     --muted: #6d756e;
