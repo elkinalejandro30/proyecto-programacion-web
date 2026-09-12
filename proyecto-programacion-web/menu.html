@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- # SEO: título y descripción específicos de la página del menú. -->
+    <title>Menú | AndyGusteau</title>
+    <meta name="description" content="Consulta el menú de temporada de AndyGusteau: entradas, platos principales, postres y precios de nuestra cocina de autor.">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- # Encabezado global: conserva la navegación y marca Menú como la vista activa. -->
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Ir al inicio de AndyGusteau"><span class="brand-mark">AG</span><span>AndyGusteau</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a class="active" href="menu.html">Menú</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- # Cabecera de la carta. -->
+        <section class="page-intro">
+            <p class="eyebrow">Carta de temporada · Primavera</p>
+            <h1>El menú de Andy.</h1>
+            <p>Una carta de autor donde ingredientes excepcionales se encuentran con una técnica precisa y una presentación sobria. Todos los precios están expresados en dólares estadounidenses.</p>
+        </section>
+
+        <!-- # Catálogo destacado: cada tarjeta reúne imagen, categoría, descripción y precio de un plato. -->
+        <section class="section dish-grid-section">
+            <div class="section-heading"><p class="eyebrow">Para comenzar y compartir</p><h2>Favoritos de la casa</h2></div>
+            <div class="dish-grid">
+                <article class="dish-card">
+                    <img src="imagenes/ajoblanco de coco con tartar de gamba roja y caviar.jpg" alt="Ajoblanco de coco con tartar de gamba roja y caviar">
+                    <div class="dish-content"><span class="dish-category">Amuse-bouche</span><h3>Ajoblanco de Coco, Gamba Roja &amp; Caviar</h3><p>Ajoblanco de coco sedoso, tartar de gamba roja y caviar como acabado salino.</p><strong>$38 USD</strong></div>
+                </article>
+                <article class="dish-card">
+                    <img src="imagenes/Camarones al ajillo con champiñones.jpg" alt="Camarones al ajillo con champiñones">
+                    <div class="dish-content"><span class="dish-category">Entrada</span><h3>Camarones al Ajillo &amp; Hongos Silvestres</h3><p>Camarones perfumados con ajo, hongos silvestres y mantequilla de hierbas.</p><strong>$44 USD</strong></div>
+                </article>
+                <article class="dish-card">
+                    <img src="imagenes/Steamed Cod with Peas and Lemon Verbena.jpg" alt="Bacalao al vapor con guisantes y verbena de limón">
+                    <div class="dish-content"><span class="dish-category">Principal</span><h3>Bacalao, Guisantes &amp; Verbena de Limón</h3><p>Bacalao cocido al vapor, guisantes tiernos y un delicado perfume cítrico.</p><strong>$52 USD</strong></div>
+                </article>
+                <article class="dish-card">
+                    <img src="imagenes/wagyu beef.jpg" alt="Corte de carne wagyu servido en plato oscuro con hierbas">
+                    <div class="dish-content"><span class="dish-category">Signature cut</span><h3>Wagyu Beef Grand Cru</h3><p>Corte wagyu sellado, sal marina, hierbas finas y jugo reducido de la casa.</p><strong>$86 USD</strong></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- # Consulta de precios: la lista facilita el escaneo y la tabla ofrece datos estructurados. -->
+        <section class="section menu-details">
+            <div class="menu-list-block">
+                <p class="eyebrow">La carta completa</p>
+                <h2>Una carta breve, precisa y memorable.</h2>
+                <ul class="menu-list">
+                    <li><span>Pan de masa madre &amp; mantequilla ahumada</span><strong>$12 USD</strong></li>
+                    <li><span>Arepa de maíz morado, queso curado</span><strong>$18 USD</strong></li>
+                    <li><span>Ajoblanco de Coco, Gamba Roja &amp; Caviar</span><strong>$38 USD</strong></li>
+                    <li><span>Camarones al Ajillo &amp; Hongos Silvestres</span><strong>$44 USD</strong></li>
+                    <li><span>Bacalao, Guisantes &amp; Verbena de Limón</span><strong>$52 USD</strong></li>
+                    <li><span>Wagyu Beef Grand Cru</span><strong>$86 USD</strong></li>
+                    <li><span>Pollo de Granja, Fondo de Trufa</span><strong>$46 USD</strong></li>
+                    <li><span>Guayaba, Vainilla &amp; Chocolate Blanco</span><strong>$22 USD</strong></li>
+                </ul>
+            </div>
+            <div class="table-wrap compact-table">
+                <table>
+                    <caption>Selección de platos y precios en USD</caption>
+                    <thead><tr><th>Plato</th><th>Tipo</th><th>Precio</th></tr></thead>
+                    <tbody>
+                        <tr><td>Arepa de maíz morado, queso curado</td><td>Entrada</td><td>$18 USD</td></tr>
+                        <tr><td>Ajoblanco de Coco, Gamba Roja &amp; Caviar</td><td>Amuse-bouche</td><td>$38 USD</td></tr>
+                        <tr><td>Camarones al Ajillo &amp; Hongos Silvestres</td><td>Entrada</td><td>$44 USD</td></tr>
+                        <tr><td>Bacalao, Guisantes &amp; Verbena de Limón</td><td>Principal</td><td>$52 USD</td></tr>
+                        <tr><td>Wagyu Beef Grand Cru</td><td>Signature cut</td><td>$86 USD</td></tr>
+                        <tr><td>Guayaba, Vainilla &amp; Chocolate Blanco</td><td>Postre</td><td>$22 USD</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- # Formulario de eventos: recopila los datos mínimos para preparar una propuesta personalizada. -->
+        <section class="section form-section event-section">
+            <div class="form-intro">
+                <p class="eyebrow">Eventos especiales</p>
+                <h2>Haz espacio para una celebración.</h2>
+                <p>¿Planeas un cumpleaños, una cena empresarial o un evento privado? Cuéntanos la idea y te contactaremos con una propuesta.</p>
+            </div>
+            <form id="eventForm" class="site-form" novalidate>
+                <div class="form-row">
+                    <label for="eventName">Nombre de contacto <span>*</span></label>
+                    <input type="text" id="eventName" name="eventName" required minlength="3" placeholder="Tu nombre completo">
+                </div>
+                <div class="form-row two-columns">
+                    <div><label for="eventEmail">Correo electrónico <span>*</span></label><input type="email" id="eventEmail" name="eventEmail" required placeholder="nombre@correo.com"></div>
+                    <div><label for="eventType">Tipo de evento <span>*</span></label><select id="eventType" name="eventType" required><option value="">Selecciona una opción</option><option>Cumpleaños</option><option>Cena empresarial</option><option>Evento privado</option></select></div>
+                </div>
+                <div class="form-row two-columns">
+                    <div><label for="eventGuests">Número de invitados <span>*</span></label><input type="number" id="eventGuests" name="eventGuests" min="1" max="80" required placeholder="1 a 80"></div>
+                    <div><label for="eventDate">Fecha aproximada <span>*</span></label><input type="date" id="eventDate" name="eventDate" required></div>
+                </div>
+                <div class="form-row"><label for="eventMessage">Cuéntanos tu idea</label><textarea id="eventMessage" name="eventMessage" maxlength="300" rows="4" placeholder="Preferencias, presupuesto o detalles importantes"></textarea></div>
+                <button class="button button-primary" type="submit">Solicitar información</button>
+                <p class="form-feedback" id="eventFeedback" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- # Pie de página: mantiene el contacto y enlaza con el flujo de reservas. -->
+    <footer class="site-footer"><div><strong>AndyGusteau</strong><span>Cocina que se recuerda.</span></div><p>Martes a domingo · Bogotá</p><a href="reservas.html">Ir a reservas →</a></footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,11 +1,20 @@
-// # Inserta el estado de validacion y el mensaje resultante en el bloque de feedback del formulario.
+/**
+ * Muestra el resultado de la validación dentro del formulario correspondiente.
+ * @param {HTMLFormElement} formulario Formulario que contiene el mensaje.
+ * @param {string} mensaje Texto que verá la persona usuaria.
+ * @param {'error'|'success'} tipo Clase visual que representa el resultado.
+ */
 function mostrarMensaje(formulario, mensaje, tipo) {
     const mensajeElemento = formulario.querySelector('.form-feedback');
     mensajeElemento.textContent = mensaje;
     mensajeElemento.className = `form-feedback ${tipo}`;
 }
 
-// # Compara la fecha seleccionada con el inicio del dia local para bloquear fechas anteriores a hoy.
+/**
+ * Comprueba que una fecha exista y no sea anterior al día actual.
+ * @param {HTMLInputElement} campoFecha Campo de fecha que se va a revisar.
+ * @returns {boolean} true cuando la fecha es válida para una solicitud.
+ */
 function validarFechaFutura(campoFecha) {
     const hoy = new Date();
     const fechaActual = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
@@ -13,7 +22,11 @@ function validarFechaFutura(campoFecha) {
     return campoFecha.value && fechaElegida >= fechaActual;
 }
 
-// # Configura la reserva, aplica el limite minimo de fecha y gestiona su validacion y respuesta local.
+/**
+ * Configura la reserva de mesa cuando la página incluye ese formulario.
+ * La validación nativa se conserva y se complementa con la regla de fecha futura.
+ * @returns {void}
+ */
 function prepararFormularioReserva() {
     const formulario = document.querySelector('#reservationForm');
     if (!formulario) return;
@@ -24,12 +37,14 @@ function prepararFormularioReserva() {
     formulario.addEventListener('submit', function (evento) {
         evento.preventDefault();
 
+        // Primero se aplican las restricciones declaradas en los atributos HTML5.
         if (!formulario.checkValidity()) {
             formulario.reportValidity();
             mostrarMensaje(formulario, 'Revisa los campos marcados: hay datos incompletos o con un formato incorrecto.', 'error');
             return;
         }
 
+        // Después se valida la regla que HTML5 no puede expresar por sí solo.
         if (!validarFechaFutura(campoFecha)) {
             mostrarMensaje(formulario, 'La fecha debe ser hoy o un día posterior.', 'error');
             campoFecha.focus();
@@ -42,7 +57,10 @@ function prepararFormularioReserva() {
     });
 }
 
-// # Configura la solicitud de eventos, independiente de la reserva, con validacion y feedback propios.
+/**
+ * Configura la solicitud de eventos y reutiliza las reglas comunes de validación.
+ * @returns {void}
+ */
 function prepararFormularioEventos() {
     const formulario = document.querySelector('#eventForm');
     if (!formulario) return;
@@ -71,7 +89,11 @@ function prepararFormularioEventos() {
     });
 }
 
-// # Activa solo los formularios presentes en la pagina para compartir el script entre las vistas HTML.
+/**
+ * Punto de entrada compartido por las tres páginas del sitio.
+ * Cada inicializador comprueba si su formulario existe antes de registrarse.
+ * @returns {void}
+ */
 document.addEventListener('DOMContentLoaded', function () {
     prepararFormularioReserva();
     prepararFormularioEventos();
