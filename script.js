@@ -1,11 +1,11 @@
-// # Función auxiliar para mostrar mensajes visibles junto a cada formulario.
+// # Inserta el estado de validacion y el mensaje resultante en el bloque de feedback del formulario.
 function mostrarMensaje(formulario, mensaje, tipo) {
     const mensajeElemento = formulario.querySelector('.form-feedback');
     mensajeElemento.textContent = mensaje;
     mensajeElemento.className = `form-feedback ${tipo}`;
 }
 
-// # Valida fechas para evitar solicitudes con una fecha anterior al día actual.
+// # Compara la fecha seleccionada con el inicio del dia local para bloquear fechas anteriores a hoy.
 function validarFechaFutura(campoFecha) {
     const hoy = new Date();
     const fechaActual = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
@@ -13,7 +13,7 @@ function validarFechaFutura(campoFecha) {
     return campoFecha.value && fechaElegida >= fechaActual;
 }
 
-// # Conecta la validación HTML5 con mensajes claros y visibles para la reserva.
+// # Configura la reserva, aplica el limite minimo de fecha y gestiona su validacion y respuesta local.
 function prepararFormularioReserva() {
     const formulario = document.querySelector('#reservationForm');
     if (!formulario) return;
@@ -42,7 +42,7 @@ function prepararFormularioReserva() {
     });
 }
 
-// # Valida el formulario de eventos, que tiene un propósito diferente a la reserva.
+// # Configura la solicitud de eventos, independiente de la reserva, con validacion y feedback propios.
 function prepararFormularioEventos() {
     const formulario = document.querySelector('#eventForm');
     if (!formulario) return;
@@ -71,7 +71,7 @@ function prepararFormularioEventos() {
     });
 }
 
-// # Inicializa únicamente los formularios que existen en la página actual.
+// # Activa solo los formularios presentes en la pagina para compartir el script entre las vistas HTML.
 document.addEventListener('DOMContentLoaded', function () {
     prepararFormularioReserva();
     prepararFormularioEventos();
