@@ -42,6 +42,17 @@ AndyGusteau/
 
 El proyecto no necesita `npm install`, Node.js ni un servidor backend.
 
+### Requisito para descargar el video
+
+El video `imagenes/0910.mp4` se administra con Git LFS por su tamaño. Antes de clonar el repositorio, instala Git LFS desde [git-lfs.com](https://git-lfs.com/) y ejecuta:
+
+```bash
+git lfs install
+git clone URL_DEL_REPOSITORIO
+```
+
+Si el repositorio ya fue clonado, ejecuta `git lfs pull` dentro de la carpeta del proyecto para descargar el video completo.
+
 ### Opción 1: abrir directamente
 
 1. Abre la carpeta del proyecto en el explorador de archivos.
