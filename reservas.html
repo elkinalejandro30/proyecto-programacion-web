@@ -1,3 +1,62 @@
+<!-- Documentacion: formulario de reservas con validaciones HTML5 y respuesta local. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- # SEO: título y descripción específicos de la página de reservas. -->
+    <title>Reservas | AndyGusteau</title>
+    <meta name="description" content="Reserva una mesa en AndyGusteau. Elige fecha, hora, número de personas y comparte tus preferencias con nuestro equipo.">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- # Encabezado y navegación hacia inicio y menú. -->
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Ir al inicio de AndyGusteau"><span class="brand-mark">AG</span><span>AndyGusteau</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a><a href="menu.html">Menú</a><a class="active" href="reservas.html">Reservas</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- # Introducción de la página y orientación al cliente. -->
+        <section class="page-intro reservation-intro"><p class="eyebrow">Tu mesa te espera</p><h1>Reserva tu momento.</h1><p>Completa los datos y revisaremos la disponibilidad. La confirmación final sería gestionada por un backend en un restaurante real.</p></section>
+
+        <!-- # Primer formulario obligatorio: reserva de mesa con HTML5 y JavaScript. -->
+        <section class="section form-section">
+            <div class="form-intro"><p class="eyebrow">Formulario 01 · Reserva</p><h2>Cuéntanos cómo nos visitas.</h2><p>Los campos marcados con <span class="required-mark">*</span> son obligatorios. Recibirás una respuesta en el correo indicado.</p></div>
+            <form id="reservationForm" class="site-form" novalidate>
+                <div class="form-row two-columns">
+                    <div><label for="customerName">Nombre completo <span>*</span></label><input type="text" id="customerName" name="customerName" required minlength="3" maxlength="60" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" placeholder="Tu nombre completo"><small>Usa solo letras y espacios.</small></div>
+                    <div><label for="customerEmail">Correo electrónico <span>*</span></label><input type="email" id="customerEmail" name="customerEmail" required placeholder="nombre@correo.com"></div>
+                </div>
+                <div class="form-row two-columns">
+                    <div><label for="guestCount">Número de personas <span>*</span></label><input type="number" id="guestCount" name="guestCount" min="1" max="12" required placeholder="1 a 12"></div>
+                    <div><label for="reservationDate">Fecha <span>*</span></label><input type="date" id="reservationDate" name="reservationDate" required></div>
+                </div>
+                <div class="form-row two-columns">
+                    <div><label for="reservationTime">Hora <span>*</span></label><input type="time" id="reservationTime" name="reservationTime" min="12:00" max="21:30" required></div>
+                    <div><label for="reservationType">Tipo de reserva <span>*</span></label><select id="reservationType" name="reservationType" required><option value="">Selecciona una opción</option><option>Almuerzo</option><option>Cena</option><option>Celebración</option></select></div>
+                </div>
+                <fieldset class="form-row"><legend>Preferencias adicionales</legend><label class="check-label"><input type="checkbox" name="vegetarian"> Opción vegetariana</label><label class="check-label"><input type="checkbox" name="quietTable"> Mesa tranquila</label></fieldset>
+                <div class="form-row"><label for="reservationNote">Nota para el equipo</label><textarea id="reservationNote" name="reservationNote" maxlength="250" rows="4" placeholder="Alergias o una ocasión especial"></textarea></div>
+                <button class="button button-primary" type="submit">Enviar solicitud</button>
+                <p class="form-feedback" id="reservationFeedback" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!-- # Información útil y explicación académica de la línea de profundización. -->
+        <section class="section info-columns">
+            <article><p class="eyebrow">Antes de venir</p><h2>Información útil</h2><ul class="simple-list"><li>Guardamos la mesa durante 15 minutos.</li><li>Para grupos de más de 12 personas, usa el formulario de eventos.</li><li>Informar alergias con anticipación nos ayuda a cuidarte mejor.</li></ul></article>
+            <article class="method-card"><p class="eyebrow">Temática 3 · Peticiones</p><h2>¿Cómo funcionaría el backend?</h2><p><strong>POST</strong> enviaría esta nueva reserva al servidor. <strong>GET</strong> consultaría horarios disponibles. <strong>PUT</strong> modificaría una reserva existente y <strong>DELETE</strong> la cancelaría. En este ejercicio el formulario muestra una confirmación local, porque no hay servidor conectado.</p></article>
+        </section>
+    </main>
+
+    <!-- # Pie de página de reservas. -->
+    <footer class="site-footer"><div><strong>AndyGusteau</strong><span>Cocina que se recuerda.</span></div><p>Cra. 5 # 72-18 · Bogotá</p><a href="mailto:hola@andygusteau.test">hola@andygusteau.test</a></footer>
+    <script src="script.js"></script>
+</body>
+</html>
 <!-- Documentacion: formulario de reserva con validaciones HTML5 y respuesta gestionada por JavaScript. -->
 <!DOCTYPE html>
 <html lang="es">
